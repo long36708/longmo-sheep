@@ -66,10 +66,16 @@ sheep release [options]
 
 ### 部分发布与完整发布
 
-- **部分发布**：仅更新自上次发布以来有变更的包
+发布行为取决于版本升级类型：
+
+- **部分发布**：仅更新并发布自上次发布以来**有变更的包**
   - 对于 `0.x` 版本：仅 `patch`/`prepatch`/`prerelease` 升级触发部分发布
   - 对于 `1.x+` 版本：`minor`/`preminor`/`patch`/`prepatch`/`prerelease` 升级触发部分发布
-- **完整发布**：更新所有包（使用 `major` 升级或 `--force` 参数）
+- **完整发布**：更新并发布**所有包**（无论是否有变更）
+  - 任何版本的 `major` 升级
+  - 使用 `--force` 参数时
+
+> **提示**：若部分发布时未检测到任何包有变更，发布会中止并提示 "No package has changed since last release."，此时可使用 `--force` 强制发布所有包。
 
 ### CHANGELOG 生成
 
