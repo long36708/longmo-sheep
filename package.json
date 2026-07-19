@@ -1,5 +1,5 @@
 {
-  "name": "@akryum/sheep",
+  "name": "longmo-sheep",
   "version": "0.6.1",
   "description": "Opinionated CLI command to release and update CHANGELOG.md",
   "keywords": [
@@ -11,11 +11,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Akryum/sheep.git"
+    "url": "https://github.com/long36708/longmo-sheep.git"
   },
   "license": "MIT",
   "author": {
-    "name": "Guillaume Chau"
+    "name": "longmo"
   },
   "type": "module",
   "main": "./dist/index.js",
